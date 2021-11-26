@@ -1,0 +1,268 @@
+@import "../../assets/styles.scss";
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+
+/** ---------------------CREATE NEW POST---------------------*/
+
+button{
+    max-width: 100% !important;
+}
+
+main{
+    background-color: $light-gray;
+    .create-post-inner{
+        max-width: 1280px;
+        .header-nav-container{
+            
+            .page-title-wrapper{
+                display: flex;
+                align-items: center;
+                p{
+                    font-weight: 400;
+                }
+            }
+            .nav-buttons-wrapper{
+                ul{
+                    li{
+                        list-style: none;
+                        transition-duration: 0.3s;
+                        &:hover{
+                            background-color: lavender;
+                            border-radius: 5px;
+                            }
+                            button{
+                                &:hover{
+                                    color: $hover-tabs-color;
+                                }
+                            }
+                    }
+                }
+            }
+        }
+        .create-post-container{
+           .main-creation-container{
+                .post-content-container{
+                       height: 75vh;
+                      
+                        .post-content-header{
+                        .image-preview-wrapper{
+                            .image-preview-container{
+                                .image-preview-div{                                 
+                                    .image-preview{
+                                        object-fit: cover;
+                                        border-radius: 5px ;
+                                    }
+                                }
+                                
+                            }
+
+                        }    
+
+
+                        .new-cover-img {    // BUTTON ADD POST IMAGE
+                            
+                            width: auto;
+                            height: 40px;
+                            overflow: hidden;
+                            text-align: center;
+                            background-color: white;                                                                                    
+                            margin-left: 10px;                            
+                            padding-left: 1rem;
+                            padding-right: 1rem;
+                            border: solid 2px #d6d6d7 ;                            
+                            border-radius: 6px;
+                            font-family: "Montserrat", sans-serif;
+                            font-weight: bold;
+                            opacity: 3;  
+                                                       
+                            .input-file-image-name  //INPUT POST IMAGE
+                            {
+                                display:none;
+                                
+                            }
+                            
+                            .label-post-cover-image   // LABEL BUTTON POST IMAGE
+                            {
+                                text-align:center;
+                                cursor: pointer;
+                            }
+
+                          }
+   
+                        a:link{ // REMOVE BUTTON   
+
+                            background: #00000000;                            
+                            color: #dc1818;  
+                            border-radius: 5px; 
+                            font-size: 1rem;
+                            height: 40px;
+                            text-align: center;
+
+                        }
+                        a:hover{ // REMOVE BUTTON HOVER  
+                            background: #f5f2f2;
+                            color: #dc1818;
+                            border-radius: 5px;  
+                            font-size: 1rem;
+                            height: 40px;
+                                                           
+                        }                          
+
+                        .title-container{     // POST TITLE
+                            .post-title-text{
+                                
+                                font-weight: 700; 
+                                border: none;
+                                padding: 0;
+                                margin: 0;
+                                outline: none;
+                                width: 100%;
+                                box-shadow: none;
+                                min-height: 60px;
+                                overflow: hidden;                                                              
+                                resize: none;
+                                font-size: 1.875rem;
+
+
+
+                            } 
+                        }
+
+                        .tags-container{
+                            .tag-input-text{  // POST TAGS
+                                background: transparent;
+                                border: none;
+                                padding: 0;
+                                margin: 0;
+                                outline: none;
+                                width: 100%;
+                                box-shadow: none;
+                                resize: none;
+                                transition: none;
+                                font-family: monospace;
+                                font-size: 1.125rem;
+                            } 
+
+                        }
+
+                  
+                       
+                    }
+                    .other-image-container{
+                        //   max-width: 100%;
+                       .other-image-button {   // OTHER POST IMAGE
+                           width: 100% ;                            
+                           height: 50px;
+                           overflow: hidden;
+                           text-align: left;
+                           background-color: #eef0f1;
+                           padding: 0.9em;
+                           border-color: darkgrey;
+                           border: solid 2px;
+                           border: none;
+                           font-family: "Montserrat", sans-serif;
+                           font-weight: bold;
+                           opacity: 3;                                
+
+                           .other-image-input{
+                               display:none;
+                           }
+                       }    
+                   }                     
+                    .post-content-body{
+                         .text-body-container{
+                             .publish-post{  // POST TEXT CONTENT
+                                background: transparent;
+                                border: none;
+                                padding: 0;
+                                margin: 0;
+                                outline: none;
+                                width: 100%;
+                                box-shadow: none;
+
+                                //transition: none;
+                                font-family: monospace;
+                                font-size: 1.125rem;
+
+                                overflow: hidden;                                                              
+                                resize: none;
+                                
+                             }       
+
+                         }   
+
+                    }
+                    
+
+                }
+            }
+        }
+
+
+    }
+}
+.btn-publish-post{
+    height: 40px;
+    width: 94px;
+    white-space: nowrap;
+    font-weight: 600;
+    border: none;
+    background-color: $main-blue;
+    &:hover{
+        background-color: darken($main-blue,5%);
+    }
+}
+
+
+.btn-save-draft{
+    height: 40px;
+    width: 94px;
+    margin-left: .3rem;
+    margin-right: .3rem;
+    white-space: nowrap;
+    font-weight: 600;
+    border: none;
+    background-color: #b5bdc4;
+    opacity: 0.7;
+    &:hover{
+        opacity: 1;
+    }
+}
+
+
+
+@media(min-width: 768px){
+    
+
+    #title{
+        font-size: 2.5rem;
+    }
+    .post-content-container{
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 1rem;
+    }
+    .close-editor-wrapper{
+        position: fixed;
+        top: 13px;
+        right: 30px;
+    }
+    .aside-content-wrapper{
+        width: 250px;
+    }
+}
+
+@media(min-width: 992px){
+    .button-tittle-wrapper
+    {
+        padding-left: 138px;
+    }
+}
+
+@media(min-width: 1200px){
+    .aside-content-wrapper{
+        width: 300px;
+    }
+}
+
+
